@@ -182,13 +182,13 @@ int main()
         }
         do
         {
-            printf("Lagi? (y/t): ");
             fflush(stdin);
+            printf("Lagi? (y/t): ");
             resp = getchar();
 
-        } while (resp != tolower('Y') && resp != tolower('T'));
+        } while (tolower(resp) != 'y' && tolower(resp) != 't');
 
-    } while (resp == tolower('y'));
+    } while (tolower(resp) == 'y');
 
     return 0;
 }
